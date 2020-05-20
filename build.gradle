@@ -9,7 +9,8 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:3.5.3'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    // NOTE: Do not place your application dependencies here; they belong
+    classpath 'com.google.gms:google-services:4.3.3'
+      // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
   }
 }
@@ -40,4 +41,12 @@ ext {
   rxKotlinVersion = '2.4.0'
   lifecycleVersion = '2.2.0'
   roomVersion = '2.2.3'
+  rememberVersion = '1.0.0@aar'
+  stethoVersion = '1.5.0'
+  lottieVersion = '3.4.0'
+  materialVersion = '1.0.0'
+  fireAuthVersion = '19.3.0'
+  serviceAuthVersion = '17.0.0'
+  serviceAuthVersion = '17.0.0'
+  navigationVersion = '1.0.0-alpha04'
 }

@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryLight">#73C088</color>
-    <color name="colorPrimary">#397d54</color>
-    <color name="colorPrimaryDark">#235D3A</color>
-    <color name="colorAccent">#C93D34</color>
+  <!--    <color name="colorPrimaryLight">#328806</color>-->
+  <!--    <color name="colorPrimary">#005C2D</color>-->
+  <!--    <color name="colorPrimaryDark">#004425</color>-->
+  <!--    <color name="colorAccent">#F2F100</color>-->
+
+<!--  <color name="colorPrimaryLight">#44AFF2</color>-->
+<!--  <color name="colorPrimary">#118CD9</color>-->
+<!--  <color name="colorPrimaryDark">#0583F2</color>-->
+<!--  <color name="colorAccent">#D95B27</color>-->
+
+  <color name="colorPrimaryLight">#47FFE6</color>
+  <color name="colorPrimary">#27D9C1</color>
+  <color name="colorPrimaryDark">#20B39F</color>
+  <color name="colorAccent">#D95B27</color>
+
+  <color name="colorBlack">#242424</color>
+
+  <color name="colorWhite">#FFFFFF</color>
+  <color name="colorWhiteTransparent">#00FFFFFF</color>
+  <color name="colorBackground">#F2F2F2</color>
+
+
+  <color name="colorGrayLight">#ddd</color>
+  <color name="colorGreyDark">#aaa</color>
+  <color name="colorGGRed">#db3236</color>
+  <color name="colorGGBlue">#4285f4</color>
+
+  <color name="colorSuccess">#0583F2</color>
+  <color name="colorFail">#db3236</color>
+  <color name="colorCMDText">#F2F2F2</color>
 </resources>

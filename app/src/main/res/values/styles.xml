@@ -1,12 +1,15 @@
 <resources>
 
   <!-- Base application theme. -->
-  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
     <item name="android:fontFamily">@font/f_lato_regular</item>
+    <item name="android:textColor">@color/colorBlack</item>
+    <item name="android:textSize">@dimen/text_14</item>
+    <item name="android:letterSpacing">0.02</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
@@ -14,18 +17,182 @@
     <item name="windowNoTitle">true</item>
   </style>
 
+  <style name="AppTheme.FullScreen">
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-  <style name="AppTheme.Button">
-    <item name="android:textSize">@dimen/text_18</item>
-    <item name="android:textAllCaps">true</item>
-    <item name="android:fontFamily">@font/f_lato_bold</item>
+  <style name="AppTheme.LayoutItem">
+    <item name="android:paddingStart">@dimen/space_16</item>
+    <item name="android:paddingEnd">@dimen/space_16</item>
+    <item name="android:paddingTop">@dimen/space_8</item>
+    <item name="android:paddingBottom">@dimen/space_8</item>
   </style>
 
-  <style name="AppTheme.Button.Primary">
-    <item name="android:background">@color/colorAccent</item>
+  <style name="AppTheme.Line">
+    <item name="android:background">@color/colorGrayLight</item>
+  </style>
+
+<!--  TextView -->
+  <style name="AppTheme.TextView">
+    <item name="android:textSize">@dimen/text_14</item>
+    <item name="android:fontFamily">@font/f_lato_regular</item>
+    <item name="android:textColor">@color/colorBlack</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:layout_gravity">center_vertical</item>
+  </style>
+
+  <style name="AppTheme.TextView.GrayBorder">
+    <item name="android:background">@drawable/bg_white_with_border_gray</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header">
+    <item name="android:fontFamily">@font/f_lato_bold</item>
+    <item name="android:paddingTop">@dimen/space_4</item>
+    <item name="android:paddingBottom">@dimen/space_4</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H7">
+    <item name="android:textSize">@dimen/text_16</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H6">
+    <item name="android:textSize">@dimen/text_20</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H5">
+    <item name="android:textSize">@dimen/text_24</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H4">
+    <item name="android:textSize">@dimen/text_32</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H3">
+    <item name="android:textSize">@dimen/text_48</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H2">
+    <item name="android:textSize">@dimen/text_64</item>
+    <item name="android:fontFamily">@font/f_lato_light</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H2.White">
     <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="AppTheme.TextView.Header.H1">
+    <item name="android:textSize">@dimen/text_96</item>
+    <item name="android:fontFamily">@font/f_lato_light</item>
+  </style>
+
+  <style name="AppTheme.TextView.Label">
+    <item name="android:textSize">@dimen/text_96</item>
+    <item name="android:fontFamily">@font/f_lato_light</item>
+  </style>
+
+<!--  TextInputLayout-->
+  <style name="AppTheme.TextInputLayout">
+    <item name="android:fontFamily">@font/f_lato_regular</item>
+    <item name="android:textSize">@dimen/text_16</item>
+    <item name="android:paddingTop">@dimen/space_4</item>
+    <item name="android:paddingBottom">@dimen/space_4</item>
+  </style>
+
+  <style name="AppTheme.TextInputLayout.White" parent="Widget.Design.TextInputLayout">
+    <item name="android:textColorHint">@android:color/darker_gray</item>
+    <item name="colorAccent">@android:color/darker_gray</item>
+    <item name="colorControlNormal">@color/colorPrimaryDark</item>
+    <item name="colorControlActivated">@color/colorPrimaryLight</item>
+  </style>
+
+  <style name="AppTheme.TextInputEditText">
+    <item name="android:fontFamily">@font/f_lato_regular</item>
+    <item name="android:textSize">@dimen/text_16</item>
+  </style>
+
+  <style name="AppTheme.TextInputEditText.White">
+    <item name="android:fontFamily">@font/f_lato_regular</item>
+    <item name="android:textSize">@dimen/text_14</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+<!--  Buttons -->
+  <style name="AppTheme.Button">
+    <item name="android:background">@drawable/bg_btn_no_bg_no_borderless</item>
+    <item name="android:textSize">@dimen/text_16</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:fontFamily">@font/f_lato_bold</item>
+    <item name="android:padding">@dimen/space_12</item>
+    <item name="android:gravity">center</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:stateListAnimator">@null</item>
+  </style>
+
+<!--  Primary Button of the screen represents the important function.
+  - Such as: send data to server, store data.
+  - Style:
+      + background: accent
+      + text: white
+ -->
+  <style name="AppTheme.Button.Primary">
+    <item name="android:background">@drawable/bg_btn_primary_color</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="AppTheme.Button.PrimaryDark">
+    <item name="android:background">@drawable/bg_btn_primary_dark_color</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="AppTheme.Button.Accent">
+    <item name="android:background">@drawable/bg_btn_accent</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="AppTheme.Button.Grey">
+    <item name="android:background">@color/colorGrayLight</item>
+    <item name="android:textColor">@color/colorGreyDark</item>
+  </style>
+
+  <style name="AppTheme.Button.Google">
+    <item name="android:background">@drawable/bg_btn_gg_blue</item>
+    <item name="android:textColor">@color/colorGGBlue</item>
+    <item name="android:drawableStart">@drawable/ic_gg_white</item>
+  </style>
+
+<!--  Edit text -->
+  <style name="AppTheme.EditText">
+    <item name="android:textSize">@dimen/text_14</item>
+  </style>
+
+  <style name="AppTheme.EditText.Name">
+    <item name="android:background">@drawable/bg_white_with_border_gray</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:inputType">textPersonName</item>
+  </style>
+
+  <style name="AppTheme.EditText.Phone">
+    <item name="android:background">@drawable/bg_white_with_border_gray</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:inputType">phone</item>
+  </style>
+
+  <style name="AppTheme.EditText.Date">
+    <item name="android:background">@drawable/bg_white_with_border_gray</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:inputType">datetime</item>
+  </style>
+
+  <style name="AppTheme.EditText.Address">
+    <item name="android:background">@drawable/bg_white_with_border_gray</item>
+    <item name="android:maxLines">2</item>
   </style>
 </resources>

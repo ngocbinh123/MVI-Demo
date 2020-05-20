@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="max_input">255</integer>
+  <integer name="max_input_email">50</integer>
+  <integer name="max_input_password">50</integer>
+</resources>

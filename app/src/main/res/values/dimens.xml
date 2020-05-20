@@ -12,13 +12,24 @@
   <dimen name="text_24">24sp</dimen>
   <dimen name="text_32">32sp</dimen>
   <dimen name="text_36">36sp</dimen>
+  <dimen name="text_48">48sp</dimen>
   <dimen name="text_64">64sp</dimen>
+  <dimen name="text_96">96sp</dimen>
 
+  <dimen name="space_4">4dp</dimen>
+  <dimen name="space_8">8dp</dimen>
   <dimen name="space_12">12dp</dimen>
-  <dimen name="space_16">12dp</dimen>
+  <dimen name="space_16">16dp</dimen>
   <dimen name="space_24">24dp</dimen>
   <dimen name="space_32">32dp</dimen>
   <dimen name="space_64">64dp</dimen>
 
-  <dimen name="size_logo_signin">120dp</dimen>
+  <dimen name="size_logo_signin">240dp</dimen>
+
+  <dimen name="btn_corner">4dp</dimen>
+  <dimen name="edt_corner">4dp</dimen>
+
+  <dimen name="height_line">1dp</dimen>
+  <dimen name="height_line_2x">16dp</dimen>
+  <dimen name="size_avatar">120dp</dimen>
 </resources>
