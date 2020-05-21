@@ -6,19 +6,33 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.google.android.material.snackbar.Snackbar
-import com.nnbinh.mvidemo.MainActivity
+import com.nnbinh.mvidemo.screens.main.MainActivity
 import com.nnbinh.mvidemo.R
 import com.nnbinh.mvidemo.event.Command
 import com.nnbinh.mvidemo.extensions.withColor
+import com.nnbinh.mvidemo.network.NetworkListener
+import com.nnbinh.mvidemo.network.NetworkMonitor
 import com.nnbinh.mvidemo.screens.signInUp.SignInUpActivity
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(), NetworkListener {
+  private val networkMonitor: NetworkMonitor by lazy { NetworkMonitor(this) }
+
   val baseVM by lazy(LazyThreadSafetyMode.SYNCHRONIZED) { initViewModel() }
   protected abstract fun initViewModel(): BaseActivityVM
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     baseVM.command.observe(this, Observer { cmd -> processCommand(cmd) })
+  }
+
+  override fun onResume() {
+    super.onResume()
+    networkMonitor.enable(this)
+  }
+
+  override fun onPause() {
+    networkMonitor.disable(this)
+    super.onPause()
   }
 
   open fun processCommand(command: Command) {
@@ -58,5 +72,13 @@ abstract class BaseActivity : AppCompatActivity() {
     else if (command.resId != null)
       Snackbar.make(rootView!!, command.resId, 5000)
           .withColor(bgColor, txtColor).show()
+  }
+
+  override fun lostNetwork() {
+    showSnack(Command.Snack(resId = R.string.offline))
+  }
+
+  override fun hasNetWork() {
+    showSnack(Command.Snack(resId = R.string.online))
   }
 }

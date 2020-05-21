@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.nnbinh.mvidemo.MainActivity
+import com.nnbinh.mvidemo.screens.main.MainActivity
 import com.nnbinh.mvidemo.R
 import com.nnbinh.mvidemo.databinding.ActivitySplashBinding
 import com.nnbinh.mvidemo.base.BaseActivity

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragment_dashboard"
+    tools:ignore="UnusedNavigation">
+  <fragment
+      android:id="@+id/fragment_dashboard"
+      android:name="com.nnbinh.mvidemo.screens.dashboard.DashboardFragment"
+      android:label="@string/dashboard"
+      tools:layout="@layout/fragment_dashboard">
+    <action
+        android:id="@+id/action_dashboard_to_transactions"
+        app:destination="@id/fragment_transactions"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_dashboard_to_notifications"
+        app:destination="@id/fragment_notifications"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_dashboard_to_setting"
+        app:destination="@id/fragment_setting"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/fragment_transactions"
+      android:name="com.nnbinh.mvidemo.screens.transactions.TransactionsFragment"
+      android:label="@string/transactions"
+      tools:layout="@layout/fragment_transactions">
+    <action
+        android:id="@+id/action_transactions_to_dashboard"
+        app:destination="@id/fragment_dashboard"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_transactions_to_notifications"
+        app:destination="@id/fragment_notifications"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_transactions_to_setting"
+        app:destination="@id/fragment_setting"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/fragment_notifications"
+      android:name="com.nnbinh.mvidemo.screens.notifications.NotificationsFragment"
+      android:label="@string/notifications"
+      tools:layout="@layout/fragment_notifications">
+    <action
+        android:id="@+id/action_notifications_to_dashboard"
+        app:destination="@id/fragment_dashboard"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_notifications_to_transactions"
+        app:destination="@id/fragment_transactions"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_transactions_to_setting"
+        app:destination="@id/fragment_setting"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/fragment_setting"
+      android:name="com.nnbinh.mvidemo.screens.setting.SettingFragment"
+      android:label="@string/action_settings"
+      tools:layout="@layout/fragment_setting">
+    <action
+        android:id="@+id/action_setting_to_dashboard"
+        app:destination="@id/fragment_dashboard"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/action_setting_to_transactions"
+        app:destination="@id/fragment_transactions"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/action_setting_to_notifications"
+        app:destination="@id/fragment_notifications"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+  </fragment>
+</navigation>

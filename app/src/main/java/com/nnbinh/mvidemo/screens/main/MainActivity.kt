@@ -1,26 +1,33 @@
-package com.nnbinh.mvidemo
+package com.nnbinh.mvidemo.screens.main
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProviders
+import com.nnbinh.mvidemo.R
+import com.nnbinh.mvidemo.R.id
+import com.nnbinh.mvidemo.R.layout
+import com.nnbinh.mvidemo.base.BaseActivity
+import com.nnbinh.mvidemo.base.BaseActivityVM
 import com.nnbinh.mvidemo.data.CurrentUser
 import com.nnbinh.mvidemo.screens.signInUp.SignInUpActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+    override fun initViewModel(): BaseActivityVM {
+        return ViewModelProviders.of(this).get(MainVM::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        setContentView(layout.activity_main)
 
         fab.setOnClickListener { view ->
-          CurrentUser.clearInfo()
-          val intent = Intent(this, SignInUpActivity::class.java)
-          intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-          startActivity(intent)
+            CurrentUser.clearInfo()
+            val intent = Intent(this, SignInUpActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
     }
 
@@ -35,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -44,4 +44,9 @@
   <string name="pls_fill_full_name">Please fill your full name.</string>
   <string name="pls_fill_password">Please fill password.</string>
   <string name="password_incorrect">Password is incorrect.</string>
+  <string name="dashboard">Dashboard</string>
+  <string name="transactions">Transactions</string>
+  <string name="notifications">Notifications</string>
+    <string name="online">Online</string>
+  <string name="offline">Offline</string>
 </resources>

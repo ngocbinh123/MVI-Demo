@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/act_dashboard"
+      android:title="@string/dashboard"
+      android:icon="@drawable/ic_home_white"
+      />
+
+  <item
+      android:id="@+id/act_transactions"
+      android:title="@string/transactions"
+      android:icon="@drawable/ic_shopping_cart_white"
+      />
+
+  <item
+      android:id="@+id/act_notifications"
+      android:title="@string/notifications"
+      android:icon="@drawable/ic_notifications_white"
+      />
+
+  <item
+      android:id="@+id/act_setting"
+      android:title="@string/action_settings"
+      android:icon="@drawable/ic_settings_white"
+      />
+</menu>
